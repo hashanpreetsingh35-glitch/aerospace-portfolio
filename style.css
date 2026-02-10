@@ -1,0 +1,356 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
+header { background: #002D62; color: white; padding: 2rem; text-align: center; }
+.container { width: 80%; margin: auto; overflow: hidden; padding: 20px; }
+.project-card { border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; border-radius: 8px; background: #f9f9f9; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.badge { background: #e8491d; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; }
+/* General Styling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    color: #002D62;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: #002D62;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Navigation Bar */
+nav {
+    background: #002D62;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+nav .site-title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e8491d;
+    text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+    background: url('https://via.placeholder.com/1500x800/002D62/FFFFFF?text=Aerospace+Background') no-repeat center center/cover; /* Placeholder background */
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+    border-radius: 10px;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button.primary {
+    background: #e8491d;
+    color: white;
+    border: 2px solid #e8491d;
+}
+
+.button.primary:hover {
+    background: transparent;
+    color: #e8491d;
+    text-decoration: none;
+}
+
+.button.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.button.secondary:hover {
+    background: white;
+    color: #002D62;
+    text-decoration: none;
+}
+
+/* Work Section */
+#work {
+    padding-top: 80px; /* To account for sticky nav */
+    background-color: white;
+}
+
+#work h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.work-categories {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-filter {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0 10px 10px 0;
+    background-color: #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.category-filter:hover, .category-filter.active {
+    background-color: #002D62;
+    color: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.projects-grid .project-card {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: block; /* Ensure the whole card is clickable */
+    color: inherit;
+}
+
+.projects-grid .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    text-decoration: none;
+}
+
+.projects-grid .project-card h3 {
+    color: #002D62;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Resume Section */
+#resume {
+    padding-top: 80px;
+    background-color: #f4f4f4;
+}
+
+#resume h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+#resume h3 {
+    color: #002D62;
+    margin-top: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+#resume h4 {
+    color: #002D62;
+}
+
+#resume ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+#resume .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+#resume .skills-grid > div {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Contact Page Specific Styling */
+#contact-page {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: white;
+    text-align: center;
+}
+
+#contact-page h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#contact-page p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Footer (Main) */
+footer#main-footer {
+    background: #002D62;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer#main-footer p {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 10px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    #hero p {
+        font-size: 1.2rem;
+    }
+    .cta-buttons a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+    .container {
+        width: 95%;
+    }
+    #resume .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+    #hero p {
+        font-size: 1rem;
+    }
+    nav .site-title {
+        font-size: 1.2rem;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
