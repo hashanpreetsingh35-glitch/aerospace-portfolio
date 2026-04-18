@@ -504,6 +504,26 @@ a:hover {
     line-height: 1.6;
 }
 
+.project-details h4 {
+    margin: 18px 0 8px;
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+.project-details ul {
+    margin: 0 0 0 20px;
+    padding-left: 0;
+}
+
+.project-details ul li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+}
+
+.project-details a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
 
 /* Contact Section */
 .contact-info {
